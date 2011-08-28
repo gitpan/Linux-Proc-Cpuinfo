@@ -6,9 +6,10 @@ use ExtUtils::MakeMaker;
 check_lib_or_exit( 'lib' => 'proccpuinfo', 'header' => 'proccpuinfo.h' );
 
 WriteMakefile(
-    'NAME'         => 'Linux::Proc::Cpuinfo',
-    'VERSION_FROM' => 'lib/Linux/Proc/Cpuinfo.pm',
-    'PREREQ_PM'    => { 'Test::More' => 0 },
+    'NAME'               => 'Linux::Proc::Cpuinfo',
+    'VERSION_FROM'       => 'lib/Linux/Proc/Cpuinfo.pm',
+    'CONFIGURE_REQUIRES' => { 'Devel::CheckLib' => 0 },
+    'PREREQ_PM'          => { 'Test::More' => 0 },
     (
         $] >= 5.005
         ? (
@@ -23,11 +24,7 @@ WriteMakefile(
     'LICENSE'  => 'perl',
     'META_ADD' => {
         'resources' => {
-            'repository' => {
-                'type' => 'git',
-                'url'  => 'git://github.com/alanhaggai/Linux-Proc-Cpuinfo.git',
-                'web'  => 'http://github.com/alanhaggai/Linux-Proc-Cpuinfo',
-            }
+            'repository' => 'http://github.com/alanhaggai/Linux-Proc-Cpuinfo',
         },
     },
 );

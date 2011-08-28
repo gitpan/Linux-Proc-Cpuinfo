@@ -4,7 +4,7 @@ use 5.006000;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 require XSLoader;
 XSLoader::load( 'Linux::Proc::Cpuinfo', $VERSION );
@@ -113,6 +113,10 @@ Please send me information on how to install it on other systems and I will
 update it here.
 
 =back
+
+=head1 ACKNOWLEDGEMENT
+
+Tim Heaney - reported missing dependency C<Devel::CheckLib>
 
 =head1 AUTHOR
 
